@@ -1,0 +1,73 @@
+{
+  "name": "Warzone Vehicle",
+  "description": "Vehicle-optimized profile. Analog throttle/brake on triggers, camera on right stick.",
+  "target_game": "cod.exe",
+  "version": "1.0",
+  "sensitivity": {
+    "x": 18.0,
+    "y": 16.0,
+    "ads_multiplier": 0.6,
+    "hipfire_boost": 1.0
+  },
+  "curve": {
+    "type": "linear",
+    "steepness": 2.0,
+    "p1": [0.25, 0.25],
+    "p2": [0.75, 0.75]
+  },
+  "dead_zone": {
+    "inner": 0.10,
+    "outer": 0.98,
+    "type": "circular"
+  },
+  "smoothing": {
+    "enabled": true,
+    "alpha": 0.25
+  },
+  "anti_jitter": {
+    "enabled": false,
+    "threshold": 0
+  },
+  "auto_center": {
+    "enabled": true,
+    "decay_ms": 100
+  },
+  "left_stick": {
+    "ramp_up_ms": 60,
+    "walk_modifier_key": "LAlt",
+    "walk_deflection": 0.5,
+    "diagonal_normalize": true
+  },
+  "bindings": {
+    "W":          { "action": "trigger",          "gamepad_button": 0,     "trigger_axis": 2, "comment": "RT - Accelerate" },
+    "S":          { "action": "trigger",          "gamepad_button": 0,     "trigger_axis": 1, "comment": "LT - Brake/Reverse" },
+    "A":          { "action": "left_stick_left",  "gamepad_button": 0,     "trigger_axis": 0, "comment": "Steer Left" },
+    "D":          { "action": "left_stick_right", "gamepad_button": 0,     "trigger_axis": 0, "comment": "Steer Right" },
+    "Space":      { "action": "button",           "gamepad_button": 4096,  "trigger_axis": 0, "comment": "A - Handbrake (on foot: Jump; in vehicle: Handbrake)" },
+    "C":          { "action": "button",           "gamepad_button": 8192,  "trigger_axis": 0, "comment": "B - Horn" },
+    "LShift":     { "action": "button",           "gamepad_button": 64,    "trigger_axis": 0, "comment": "LS - Boost" },
+    "LCtrl":      { "action": "button",           "gamepad_button": 128,   "trigger_axis": 0, "comment": "RS - Look Back" },
+    "R":          { "action": "button",           "gamepad_button": 16384, "trigger_axis": 0, "comment": "X - Interact" },
+    "F":          { "action": "button",           "gamepad_button": 32768, "trigger_axis": 0, "comment": "Y - Killstreak" },
+    "G":          { "action": "button",           "gamepad_button": 256,   "trigger_axis": 0, "comment": "LB - Tactical" },
+    "Q":          { "action": "button",           "gamepad_button": 512,   "trigger_axis": 0, "comment": "RB - Weapon Fire" },
+    "Tab":        { "action": "button",           "gamepad_button": 32,    "trigger_axis": 0, "comment": "Back - Scoreboard" },
+    "Escape":     { "action": "button",           "gamepad_button": 16,    "trigger_axis": 0, "comment": "Start - Pause" },
+    "1":          { "action": "button",           "gamepad_button": 4,     "trigger_axis": 0, "comment": "DPAD_LEFT - Slot 1" },
+    "2":          { "action": "button",           "gamepad_button": 8,     "trigger_axis": 0, "comment": "DPAD_RIGHT - Slot 2" },
+    "LMB":        { "action": "button",           "gamepad_button": 512,   "trigger_axis": 0, "comment": "RB - Vehicle Weapon (vehicles use bumpers, not triggers, for firing)" },
+    "RMB":        { "action": "button",           "gamepad_button": 256,   "trigger_axis": 0, "comment": "LB - Secondary Weapon (vehicles use bumpers, not triggers, for firing)" },
+    "ScrollUp":   { "action": "button",           "gamepad_button": 1,     "trigger_axis": 0, "comment": "DPAD_UP" },
+    "ScrollDown": { "action": "button",           "gamepad_button": 2,     "trigger_axis": 0, "comment": "DPAD_DOWN" },
+    "Mouse4":     { "action": "button",           "gamepad_button": 256,   "trigger_axis": 0, "comment": "LB - Ping" },
+    "Mouse5":     { "action": "button",           "gamepad_button": 4096,  "trigger_axis": 0, "comment": "A - Exit Vehicle (same button as A/handbrake; context-sensitive in Warzone)" }
+  },
+  "layers": [],
+  "macros": [],
+  "hotkeys": {
+    "toggle_mode":    "F9",
+    "cycle_profile":  "F10",
+    "emergency_stop": "F12",
+    "toggle_osd":     "F8"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "Generic FPS",
+  "description": "General-purpose FPS profile. Works with most first-person shooters. Balanced sensitivity for 800 DPI.",
+  "target_game": "",
+  "version": "1.0",
+  "sensitivity": {
+    "x": 14.0,
+    "y": 12.0,
+    "ads_multiplier": 0.65,
+    "hipfire_boost": 1.0
+  },
+  "curve": {
+    "type": "s_curve",
+    "steepness": 3.5,
+    "p1": [0.25, 0.1],
+    "p2": [0.75, 0.9]
+  },
+  "dead_zone": {
+    "inner": 0.06,
+    "outer": 0.95,
+    "type": "circular"
+  },
+  "smoothing": {
+    "enabled": true,
+    "alpha": 0.35
+  },
+  "anti_jitter": {
+    "enabled": true,
+    "threshold": 2
+  },
+  "auto_center": {
+    "enabled": true,
+    "decay_ms": 60
+  },
+  "left_stick": {
+    "ramp_up_ms": 40,
+    "walk_modifier_key": "LAlt",
+    "walk_deflection": 0.5,
+    "diagonal_normalize": true
+  },
+  "bindings": {
+    "W":          { "action": "left_stick_up",    "gamepad_button": 0, "trigger_axis": 0 },
+    "A":          { "action": "left_stick_left",  "gamepad_button": 0, "trigger_axis": 0 },
+    "S":          { "action": "left_stick_down",  "gamepad_button": 0, "trigger_axis": 0 },
+    "D":          { "action": "left_stick_right", "gamepad_button": 0, "trigger_axis": 0 },
+    "Space":      { "action": "button",           "gamepad_button": 4096,  "trigger_axis": 0, "comment": "A - Jump" },
+    "C":          { "action": "button",           "gamepad_button": 8192,  "trigger_axis": 0, "comment": "B - Crouch" },
+    "LShift":     { "action": "button",           "gamepad_button": 64,    "trigger_axis": 0, "comment": "LS - Sprint" },
+    "LCtrl":      { "action": "button",           "gamepad_button": 128,   "trigger_axis": 0, "comment": "RS - Melee/Zoom" },
+    "R":          { "action": "button",           "gamepad_button": 16384, "trigger_axis": 0, "comment": "X - Reload/Interact" },
+    "F":          { "action": "button",           "gamepad_button": 32768, "trigger_axis": 0, "comment": "Y - Use/Pickup" },
+    "G":          { "action": "button",           "gamepad_button": 256,   "trigger_axis": 0, "comment": "LB - Grenade" },
+    "Q":          { "action": "button",           "gamepad_button": 512,   "trigger_axis": 0, "comment": "RB - Equipment" },
+    "Tab":        { "action": "button",           "gamepad_button": 32,    "trigger_axis": 0, "comment": "Back - Scoreboard" },
+    "Escape":     { "action": "button",           "gamepad_button": 16,    "trigger_axis": 0, "comment": "Start - Pause" },
+    "1":          { "action": "button",           "gamepad_button": 4,     "trigger_axis": 0, "comment": "DPAD_LEFT - Slot 1" },
+    "2":          { "action": "button",           "gamepad_button": 8,     "trigger_axis": 0, "comment": "DPAD_RIGHT - Slot 2" },
+    "LMB":        { "action": "trigger",          "gamepad_button": 0,     "trigger_axis": 2, "comment": "RT - Fire" },
+    "RMB":        { "action": "trigger",          "gamepad_button": 0,     "trigger_axis": 1, "comment": "LT - ADS" },
+    "ScrollUp":   { "action": "button",           "gamepad_button": 1,     "trigger_axis": 0, "comment": "DPAD_UP" },
+    "ScrollDown": { "action": "button",           "gamepad_button": 2,     "trigger_axis": 0, "comment": "DPAD_DOWN" },
+    "Mouse4":     { "action": "button",           "gamepad_button": 256,   "trigger_axis": 0, "comment": "LB - Utility" },
+    "Mouse5":     { "action": "button",           "gamepad_button": 4096,  "trigger_axis": 0, "comment": "A - Jump" }
+  },
+  "layers": [
+    {
+      "name": "ADS",
+      "trigger_key": "RMB",
+      "sensitivity_multiplier": 0.65,
+      "overrides": {}
+    }
+  ],
+  "macros": [],
+  "hotkeys": {
+    "toggle_mode":    "F9",
+    "cycle_profile":  "F10",
+    "emergency_stop": "F12",
+    "toggle_osd":     "F8"
+  }
+}
