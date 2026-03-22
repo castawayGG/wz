@@ -1,0 +1,113 @@
+{
+  "name": "Warzone Default",
+  "description": "Balanced Warzone profile for 800 DPI mouse. Optimized for versatile play with AR/LMG.",
+  "target_game": "cod.exe",
+  "version": "1.0",
+  "sensitivity": {
+    "x": 15.0,
+    "y": 13.0,
+    "ads_multiplier": 0.6,
+    "hipfire_boost": 1.0
+  },
+  "curve": {
+    "type": "s_curve",
+    "steepness": 4.0,
+    "p1": [0.25, 0.1],
+    "p2": [0.75, 0.9]
+  },
+  "dead_zone": {
+    "inner": 0.05,
+    "outer": 0.95,
+    "type": "circular"
+  },
+  "smoothing": {
+    "enabled": true,
+    "alpha": 0.3
+  },
+  "anti_jitter": {
+    "enabled": true,
+    "threshold": 2
+  },
+  "auto_center": {
+    "enabled": true,
+    "decay_ms": 50
+  },
+  "left_stick": {
+    "ramp_up_ms": 30,
+    "walk_modifier_key": "LAlt",
+    "walk_deflection": 0.5,
+    "diagonal_normalize": true
+  },
+  "bindings": {
+    "W":          { "action": "left_stick_up",    "gamepad_button": 0, "trigger_axis": 0 },
+    "A":          { "action": "left_stick_left",  "gamepad_button": 0, "trigger_axis": 0 },
+    "S":          { "action": "left_stick_down",  "gamepad_button": 0, "trigger_axis": 0 },
+    "D":          { "action": "left_stick_right", "gamepad_button": 0, "trigger_axis": 0 },
+    "Space":      { "action": "button",           "gamepad_button": 4096, "trigger_axis": 0, "comment": "A - Jump" },
+    "C":          { "action": "button",           "gamepad_button": 8192, "trigger_axis": 0, "comment": "B - Crouch/Slide" },
+    "LShift":     { "action": "button",           "gamepad_button": 64,   "trigger_axis": 0, "comment": "LS - Sprint" },
+    "LCtrl":      { "action": "button",           "gamepad_button": 128,  "trigger_axis": 0, "comment": "RS - Melee" },
+    "R":          { "action": "button",           "gamepad_button": 16384, "trigger_axis": 0, "comment": "X - Reload/Interact" },
+    "F":          { "action": "button",           "gamepad_button": 32768, "trigger_axis": 0, "comment": "Y - Use/Killstreak" },
+    "G":          { "action": "button",           "gamepad_button": 256,  "trigger_axis": 0, "comment": "LB - Tactical Equipment" },
+    "Q":          { "action": "button",           "gamepad_button": 512,  "trigger_axis": 0, "comment": "RB - Lethal Equipment" },
+    "Tab":        { "action": "button",           "gamepad_button": 32,   "trigger_axis": 0, "comment": "Back/Select - Scoreboard" },
+    "Escape":     { "action": "button",           "gamepad_button": 16,   "trigger_axis": 0, "comment": "Start - Pause Menu" },
+    "1":          { "action": "button",           "gamepad_button": 4,    "trigger_axis": 0, "comment": "DPAD_LEFT - Weapon Slot 1" },
+    "2":          { "action": "button",           "gamepad_button": 8,    "trigger_axis": 0, "comment": "DPAD_RIGHT - Weapon Slot 2" },
+    "LMB":        { "action": "trigger",          "gamepad_button": 0,    "trigger_axis": 2, "comment": "RT - Fire" },
+    "RMB":        { "action": "trigger",          "gamepad_button": 0,    "trigger_axis": 1, "comment": "LT - ADS" },
+    "ScrollUp":   { "action": "button",           "gamepad_button": 1,    "trigger_axis": 0, "comment": "DPAD_UP - Weapon Up" },
+    "ScrollDown": { "action": "button",           "gamepad_button": 2,    "trigger_axis": 0, "comment": "DPAD_DOWN - Weapon Down" },
+    "Mouse4":     { "action": "button",           "gamepad_button": 256,  "trigger_axis": 0, "comment": "LB - Ping" },
+    "Mouse5":     { "action": "button",           "gamepad_button": 4096, "trigger_axis": 0, "comment": "A - Jump (Bunny Hop)" }
+  },
+  "layers": [
+    {
+      "name": "ADS",
+      "trigger_key": "RMB",
+      "sensitivity_multiplier": 0.6,
+      "overrides": {}
+    }
+  ],
+  "macros": [
+    {
+      "name": "slide_cancel",
+      "trigger_key": "V",
+      "steps": [
+        { "button": "B",    "action": "press",   "delay_ms": 0  },
+        { "button": "B",    "action": "release",  "delay_ms": 50 },
+        { "button": "B",    "action": "press",   "delay_ms": 50 },
+        { "button": "B",    "action": "release",  "delay_ms": 50 },
+        { "button": "A",    "action": "press",   "delay_ms": 50 },
+        { "button": "A",    "action": "release",  "delay_ms": 50 }
+      ]
+    },
+    {
+      "name": "tactical_sprint",
+      "trigger_key": "LShift+W",
+      "comment": "LShift is also bound to LS (sprint hold). This macro intercepts the double-tap combination specifically for tactical sprint activation. The hold binding and macro coexist: holding LShift presses LS continuously, while the macro emits a rapid double-tap of LS when the combination is triggered.",
+      "steps": [
+        { "button": "LS",   "action": "press",   "delay_ms": 0  },
+        { "button": "LS",   "action": "release",  "delay_ms": 80 },
+        { "button": "LS",   "action": "press",   "delay_ms": 80 },
+        { "button": "LS",   "action": "release",  "delay_ms": 80 }
+      ]
+    },
+    {
+      "name": "bunny_hop",
+      "trigger_key": "Mouse5",
+      "repeat": true,
+      "steps": [
+        { "button": "A",    "action": "press",   "delay_ms": 0   },
+        { "button": "A",    "action": "release",  "delay_ms": 150 }
+      ]
+    }
+  ],
+  "hotkeys": {
+    "toggle_mode":    "F9",
+    "cycle_profile":  "F10",
+    "emergency_stop": "F12",
+    "toggle_osd":     "F8"
+  }
+}
